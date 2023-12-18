@@ -1,1 +1,1 @@
-# symbiosis studen projects
+# symbiosis student projects
