@@ -1,0 +1,26 @@
+<html>
+	<head>
+		
+	</head>
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<td> Id </td>
+					<td> Model </td>
+					<td> Manufacturer </td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="laptop:${laptops}">
+					<td th:text="${laptop.id}"></td>
+					<td th:text="${laptop.model}"></td>
+					<td th:text="${laptop.manufacturer}"></td>
+					<td><a th:href="@{laptops/update/{id}(id=${laptop.id})}">Update</a></td>
+					<td><a th:href="@{laptops/delete/{id}(id=${laptop.id})}">Delete</a></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,14 @@
+<html>
+	<head>
+		
+	</head>
+	<body>
+		<form th:action="@{/laptops/save}" th:object="${laptop}" method="post">
+			<input th:field="*{id}" type="text" hidden>
+			<input th:field="*{model}" type="text">
+			<input th:field="*{manufacturer}" type="text">
+			<button type="submit">Add Laptop</button>
+		</form>
+	</body>
+	
+</body>
