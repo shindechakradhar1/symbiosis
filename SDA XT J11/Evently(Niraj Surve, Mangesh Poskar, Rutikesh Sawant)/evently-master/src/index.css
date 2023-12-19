@@ -1,0 +1,64 @@
+/** Importing Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;700&family=Open+Sans:wght@300;400;500;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    @apply font-opensans bg-slate-50;
+}
+
+.btn-transition {
+    transition: .3s all ease-in;
+}
+
+.nav-link {
+    @apply relative max-md:w-fit font-bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    @apply text-yellow;
+}
+
+.nav-link.active {
+    @apply text-pink;
+    transition: color 0.3s ease-in;
+}
+
+.nav-link.active::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 60%;
+    position: absolute;
+    bottom: 5;
+    left: 0;
+    @apply bg-pink;
+}
+
+#quote {
+    background: linear-gradient(to top right, rgb(237, 37, 78), rgb(249, 220, 92));
+}
+
+.form-input {
+    @apply bg-dark rounded-xl flex-grow mb-4 font-mulish relative outline outline-2 outline-transparent focus-within:outline-yellow;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
